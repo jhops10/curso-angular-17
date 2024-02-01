@@ -10,6 +10,10 @@ body {
 }
 
 //Altera a cor do mat-slider que vem do angular material, e vai atualizar a cor em toda a aplicação.
-// .mdc-slider__track--active_fill {
-//   border-color: yellowgreen !important;
-// }
+mat-slider.custom-slider .mdc-slider__track--active_fill {
+  border-color: rgb(235, 146, 30) !important;
+}
+
+.global {
+  background-color: rgb(255, 182, 47);
+}
