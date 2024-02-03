@@ -18,8 +18,47 @@
 <br />
 <button (click)="logInputText()">Log</button> -->
 
-<button [attr.title]="buttonTitle">Teste</button>
+<!-- <button [attr.title]="buttonTitle">Teste</button>
 <br />
 <button [attr.disabled]="buttonDisable ? true : null">Disabled</button>
 <br />
-<button (click)="onButtonClick()">Testando 2</button>
+<button (click)="onButtonClick()">Testando 2</button> -->
+
+<!-- <button style="width: 100px; background-color: aqua">Botão 0</button>
+<br />
+<br />
+<button
+  [style.width]="widthButton1"
+  [style.backgroundColor]="backgroundColorButton1"
+>
+  Botão 1
+</button>
+<br />
+<br />
+<button [style.width.px]="widthButton2" [style.backgroundColor]="'pink'">
+  Botão 2
+</button>
+<br />
+<br />
+<button [style]="'width: 100px; background-color: brown'">Botão 3</button>
+<br />
+<br />
+<button [style]="{ width: '150px', backgroundColor: 'orange' }">Botão 4</button>
+<br />
+<br />
+<button [style]="stylesObj">Botão 5</button>
+<br />
+<br />
+<button (click)="updateStyleObj()">Botão 6</button> -->
+
+<button [class.red-button]="true" (click)="isGreen = false">Vermelho</button>
+<button [class.green-button]="true" (click)="isGreen = true">Verde</button>
+
+<button
+  [class]="{
+  'red-button': !isGreen,
+  'green-button': isGreen,
+}"
+>
+  Objeto
+</button>
