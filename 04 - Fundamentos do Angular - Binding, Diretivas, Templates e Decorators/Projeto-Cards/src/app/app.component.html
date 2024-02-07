@@ -1,7 +1,17 @@
-<app-button
-  [buttonText]="'Adquirir'"
-  [buttonStyle]="'white'"
-  (buttonClickedEmitt)="buttonClicked()"
-  [isDisabled]="false"
-></app-button>
+<div class="cards-container">
+  <app-card
+    [planType]="cardOrange.planType"
+    [planPrice]="cardOrange.planPrice"
+    [cardStyle]="cardOrange.cardStyle"
+    (buttonClickedEmitt)="onCardButtonClicked()"
+  ></app-card>
+
+  <app-card
+    [planType]="cardPurple.planType"
+    [planPrice]="cardPurple.planPrice"
+    [cardStyle]="cardPurple.cardStyle"
+    (buttonClickedEmitt)="onCardButtonClicked()"
+  ></app-card>
+</div>
+
 <router-outlet />
