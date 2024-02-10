@@ -1,0 +1,21 @@
+<!-- <div style="background-color: green" *ngIf="minhaProp; else meuTemplate">
+  Sou uma Div
+</div>
+<ng-template #meuTemplate>
+  <div style="background-color: red; color: white">Eu sou uma outra Div</div>
+</ng-template> -->
+
+<ng-container
+  *ngIf="minhaProp; then meuTemplate; else meuOutroTemplate"
+></ng-container>
+
+<ng-template #meuTemplate>
+  <div style="background-color: blue; color: white">Sou a Div "then"</div>
+</ng-template>
+<ng-template #meuOutroTemplate>
+  <div style="background-color: rgb(216, 22, 142); color: white">
+    Sou a Div "Else"
+  </div>
+</ng-template>
+
+<button (click)="toggleProp()">Toggle</button>
