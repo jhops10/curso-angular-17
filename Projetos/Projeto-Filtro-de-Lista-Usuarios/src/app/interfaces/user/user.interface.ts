@@ -6,7 +6,7 @@ export interface IUser {
   email: string;
   senha: string;
   idade: number;
-  endereco: IAdress | undefined;
+  endereco: IAdress;
   telefone: string;
   ativo: boolean;
   funcao: string;
