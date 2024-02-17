@@ -1,1 +1,22 @@
-<input type="text" />
+<!-- Exemplo 1 -->
+<input type="text" #meuInput ngModel />
+
+Valor: {{ meuInput.value }}
+
+<hr />
+<br />
+
+<!-- Exemplo 2 -->
+<input type="text" #meuInput2 />
+
+Valor: {{ meuInput2.value }}
+
+<button (click)="changeDetection()">Atualizar</button>
+
+<hr />
+<br />
+
+<!-- Exemplo 3 -->
+<input type="text" [(ngModel)]="textValue" />
+
+Valor: {{ textValue }}
