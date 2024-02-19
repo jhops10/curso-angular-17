@@ -6,11 +6,8 @@ import { ChangeDetectorRef, Component } from '@angular/core';
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  textValue = '';
-
-  constructor(private _cdRef: ChangeDetectorRef) {}
-
-  changeDetection() {
-    this._cdRef.detectChanges();
+  // Exemplo 4
+  clicou(input: HTMLInputElement) {
+    console.log(input.value);
   }
 }

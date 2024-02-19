@@ -1,22 +1,21 @@
-<!-- Exemplo 1 -->
-<input type="text" #meuInput ngModel />
+<!-- Exemplo 4 -->
+<input type="text" #meuInput3 ngModel />
 
-Valor: {{ meuInput.value }}
+Valor: {{ meuInput3.value }}
 
-<hr />
-<br />
-
-<!-- Exemplo 2 -->
-<input type="text" #meuInput2 />
-
-Valor: {{ meuInput2.value }}
-
-<button (click)="changeDetection()">Atualizar</button>
+<button (click)="clicou(meuInput3)">Atualizar</button>
 
 <hr />
-<br />
+<hr />
 
-<!-- Exemplo 3 -->
-<input type="text" [(ngModel)]="textValue" />
+<div class="primo">
+  <!-- Primo: {{ inputPai.value }} -->
+</div>
 
-Valor: {{ textValue }}
+<div class="pai" *ngIf="true">
+  Pai: <input #inputPai ngModel /> Pai: {{ inputFilho.value }}
+
+  <div class="filho">
+    Filho: <input #inputFilho ngModel /> Filho: {{ inputPai.value }}
+  </div>
+</div>
