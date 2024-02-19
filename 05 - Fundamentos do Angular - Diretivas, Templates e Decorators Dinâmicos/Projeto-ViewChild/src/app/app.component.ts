@@ -1,4 +1,10 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  OnInit,
+  ViewChild,
+} from '@angular/core';
 import { FilhoComponent } from './filho/filho.component';
 
 @Component({
@@ -6,7 +12,7 @@ import { FilhoComponent } from './filho/filho.component';
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })
-export class AppComponent {
+export class AppComponent implements OnInit, AfterViewInit {
   //Exemplo 1 (Aula 01)
   // @ViewChild('meuInput') meuInputEl!: ElementRef<HTMLInputElement>;
   // @ViewChild('minhaDiv') minhaDivEl!: ElementRef<HTMLDivElement>;
@@ -26,4 +32,21 @@ export class AppComponent {
   //   this.filhoCompRef.dizerOi();
   //   this.filhoCompRef.message = 'Eu disse Olá!';
   // }
+  // Exemplo 3 (Aula 03)
+
+  @ViewChild('meuInput')
+  meuInputEl!: ElementRef<HTMLInputElement>;
+
+  constructor() {
+    console.log('constructor');
+  }
+
+  ngOnInit(): void {
+    console.log('ngOnInit');
+  }
+
+  ngAfterViewInit(): void {
+    console.log('Template Carregado');
+    this.meuInputEl.nativeElement.focus();
+  }
 }
