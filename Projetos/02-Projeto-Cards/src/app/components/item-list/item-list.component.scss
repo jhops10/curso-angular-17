@@ -1,0 +1,11 @@
+.content {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid black;
+
+  p {
+    font-weight: 500;
+    font-size: 1rem;
+  }
+}
