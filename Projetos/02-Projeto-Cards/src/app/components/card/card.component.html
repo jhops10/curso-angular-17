@@ -1,9 +1,6 @@
 <div class="card-container">
   <div class="card-header">
-    <div class="title">
-      <img src="../../../assets/icons/icon-hand.png" />
-      <p>{{ cardTitle }}</p>
-    </div>
+    <app-card-title cardTitle="Saldos Disponíveis"></app-card-title>
     <div class="balance">
       <p>{{ balance }}</p>
     </div>
@@ -12,22 +9,27 @@
   <div class="card-content">
     <!-- Item List -->
     <app-item-list text="Conta Corrente" value="200,00"></app-item-list>
+    <app-card-line></app-card-line>
     <app-item-list
       text="Conta Corrente Saldos Vinculados"
       value="300,00"
     ></app-item-list>
+    <app-card-line></app-card-line>
     <app-item-list
       text="Conta Poupança Saldos Vinculados"
       value="400,00"
     ></app-item-list>
+    <app-card-line></app-card-line>
     <app-item-list
       text="Investimentos com Baixa Automática"
       value="500,00"
     ></app-item-list>
+    <app-card-line></app-card-line>
     <app-item-list
       text="Investimentos sem Baixa Automática"
       value="500,00"
     ></app-item-list>
+    <app-card-line></app-card-line>
     <!-- Item List -->
     <!-- Account Details -->
 

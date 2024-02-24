@@ -9,6 +9,8 @@ import { AccountDetailsComponent } from './components/account-details/account-de
 import { AccountDetailsItemComponent } from './components/account-details-item/account-details-item.component';
 import { CreditCardDetailsComponent } from './components/credit-card-details/credit-card-details.component';
 import { BordelessItemListComponent } from './components/bordeless-item-list/bordeless-item-list.component';
+import { CardLineComponent } from './components/card-line/card-line.component';
+import { CardTitleComponent } from './components/card-title/card-title.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +21,8 @@ import { BordelessItemListComponent } from './components/bordeless-item-list/bor
     AccountDetailsItemComponent,
     CreditCardDetailsComponent,
     BordelessItemListComponent,
+    CardLineComponent,
+    CardTitleComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
