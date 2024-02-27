@@ -21,12 +21,15 @@ body {
   font-size: 20px;
 }
 
-.ca-u-card-avatar-small img {
+.ca-u-card-avatar-small,
+.ca-u-card-avatar-small,
+img {
   width: 100px;
   height: 100px;
   border-radius: 100%;
 }
 
+.ca-u-card-avatar-large,
 .ca-u-card-avatar-large img {
   width: 200px;
   height: 200px;
