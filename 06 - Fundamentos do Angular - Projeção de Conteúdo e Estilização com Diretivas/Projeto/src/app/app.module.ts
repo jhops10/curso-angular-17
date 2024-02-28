@@ -5,8 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CardComponent } from './card/card.component';
 import { CompTextoComponent } from './comp-texto/comp-texto.component';
-import { CardHeaderDirective } from './directives/card-header.directive';
-import { CardContentDirective } from './directives/card-content.directive';
+import { CardHeaderDirective } from './directives/base/card-header.directive';
+import { CardContentDirective } from './directives/base/card-content.directive';
+import { CardMainTextDirective } from './directives/texts/card-main-text.directive';
+import { CardSubTextDirective } from './directives/texts/card-sub-text.directive';
+import { CardDescriptionTextDirective } from './directives/texts/card-description-text.directive';
+import { CardSmallImageDirective } from './directives/images/card-small-image.directive';
+import { CardLargeImageDirective } from './directives/images/card-large-image.directive';
 
 @NgModule({
   declarations: [
@@ -14,13 +19,15 @@ import { CardContentDirective } from './directives/card-content.directive';
     CardComponent,
     CompTextoComponent,
     CardHeaderDirective,
-    CardContentDirective
+    CardContentDirective,
+    CardMainTextDirective,
+    CardSubTextDirective,
+    CardDescriptionTextDirective,
+    CardSmallImageDirective,
+    CardLargeImageDirective,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

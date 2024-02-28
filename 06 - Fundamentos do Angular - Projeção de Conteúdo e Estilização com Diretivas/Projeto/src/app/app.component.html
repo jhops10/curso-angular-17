@@ -30,39 +30,41 @@
 <div class="container">
   <div class="item">
     <app-card>
-      <div class="card__header" card-header>
+      <app-card-header>
         <img
-          class="card__image"
+          appCardLargeImage
           src="https://cdn.iconscout.com/icon/free/png-256/free-user-3604612-3005548.png"
           alt="Profile Icon"
         />
-      </div>
-      <div class="card__content" card-content>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit.
-          Necessitatibus nulla explicabo soluta assumenda quo vel impedit
-          maiores pariatur culpa laudantium repellat praesentium accusamus
-          voluptatem laborum sequi modi reprehenderit, sint qui?
-        </p>
-      </div>
+      </app-card-header>
+      <app-card-content>
+        <div class="card__content">
+          <app-card-description-text>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Necessitatibus nulla explicabo soluta assumenda quo vel impedit
+            maiores pariatur culpa laudantium repellat praesentium accusamus
+            voluptatem laborum sequi modi reprehenderit, sint qui?
+          </app-card-description-text>
+        </div>
+      </app-card-content>
     </app-card>
   </div>
   <div class="item">
     <app-card>
       <app-card-header>
         <div class="card__header card__header--direction-column">
-          <h1>Fulano da Silva</h1>
+          <app-card-main-text>Fulano da Silva</app-card-main-text>
           <img
-            class="card__image"
+            appCardSmallImage
             src="https://cdn.iconscout.com/icon/free/png-256/free-user-3604612-3005548.png"
             alt="Profile Icon"
           />
-          <h3>Desenvolvedor Front-End</h3>
+          <app-card-sub-text>Desenvolvedor Front-End</app-card-sub-text>
         </div>
       </app-card-header>
       <app-card-content>
         <div class="card__content">
-          <p>
+          <app-card-description-text>
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod rem
             quia atque inventore molestias et corporis, voluptatibus optio
             libero quae earum a eaque aliquid sed nobis tenetur. Unde, mollitia
@@ -70,7 +72,7 @@
             Repudiandae itaque expedita molestiae laudantium consequatur?
             Sapiente perferendis, quod itaque veritatis debitis et. Eos soluta
             perspiciatis porro dolores ducimus magnam recusandae. Sint!
-          </p>
+          </app-card-description-text>
         </div>
       </app-card-content>
     </app-card>
