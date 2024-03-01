@@ -22,13 +22,19 @@
     }
   }
 
-  .bg-blue {
-    background-color: aqua;
-  }
-
   .card-content {
     background-color: #f5f5f5;
     padding: 10px;
     display: block;
+  }
+
+  &__title-text {
+    font-size: 20px;
+    font-weight: 800;
+  }
+
+  &__description-text {
+    font-size: 16px;
+    font-weight: 500;
   }
 }

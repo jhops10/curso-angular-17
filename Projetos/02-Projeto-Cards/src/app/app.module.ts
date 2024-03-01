@@ -16,8 +16,10 @@ import { CreditCardComponent } from './components/credit-card/credit-card.compon
 import { DebitCardComponent } from './components/debit-card/debit-card.component';
 import { CommentaryComponent } from './components/commentary/commentary.component';
 import { CardComponent } from './components/card/card.component';
-import { CardHeaderDirective } from './components/card/directives/card-header.directive';
-import { CardContentDirective } from './components/card/directives/card-content.directive';
+import { CardHeaderDirective } from './components/card/directives/base/card-header.directive';
+import { CardContentDirective } from './components/card/directives/base/card-content.directive';
+import { CardTitleTextDirective } from './components/card/directives/texts/card-title-text.directive';
+import { CardDescriptionTextDirective } from './components/card/directives/texts/card-description-text.directive';
 
 @NgModule({
   declarations: [
@@ -36,6 +38,8 @@ import { CardContentDirective } from './components/card/directives/card-content.
     CardComponent,
     CardHeaderDirective,
     CardContentDirective,
+    CardTitleTextDirective,
+    CardDescriptionTextDirective,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
