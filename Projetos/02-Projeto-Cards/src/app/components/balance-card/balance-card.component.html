@@ -1,5 +1,5 @@
-<div class="card-container">
-  <div class="card-header">
+<app-card>
+  <app-card-header>
     <app-card-title
       title="Saldos Disponíveis"
       icon="icon-hand.png"
@@ -7,9 +7,8 @@
     <div class="balance">
       <p>R$ 100,00</p>
     </div>
-  </div>
-
-  <div class="card-content">
+  </app-card-header>
+  <app-card-content>
     <!-- Item List -->
     <app-item-list text="Conta Corrente" value="R$ 200,00"></app-item-list>
     <app-card-line></app-card-line>
@@ -37,5 +36,5 @@
     <!-- Account Details -->
     <app-account-details></app-account-details>
     <!-- Account Details -->
-  </div>
-</div>
+  </app-card-content>
+</app-card>
