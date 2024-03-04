@@ -1,6 +1,10 @@
-<div class="card">
+<!-- <div class="card">
   <div *ngIf="condition">
     <ng-content select="app-meu-comp"></ng-content>
   </div>
   <div *ngIf="!condition">Conteúdo Não Projetado</div>
+</div> -->
+
+<div class="card">
+  <ng-container *ngTemplateOutlet="content"></ng-container>
 </div>
