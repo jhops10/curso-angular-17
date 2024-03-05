@@ -12,7 +12,7 @@ export enum UserStatusEnum {
 })
 export class AppComponent {
   pessoa = {
-    nome: 'João Paulo',
+    nome: 'Astolfo',
     idade: 33,
     status: UserStatusEnum.ATIVO,
   };

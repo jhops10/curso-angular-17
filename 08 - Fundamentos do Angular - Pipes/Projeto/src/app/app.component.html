@@ -6,4 +6,10 @@
 {{ pessoa | json | uppercase }} -->
 
 <!-- Aula 02 -->
+<!-- Status do Usuário: <b>{{ pessoa.status | userStatus }}</b> -->
+
+<!-- Aula 03  -->
+
+Nome do Usuário: <b>{{ pessoa.nome | truncate : 3 | uppercase }}</b>
+<br />
 Status do Usuário: <b>{{ pessoa.status | userStatus }}</b>
