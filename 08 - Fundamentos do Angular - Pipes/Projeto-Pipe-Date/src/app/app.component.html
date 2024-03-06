@@ -1,0 +1,19 @@
+<h1>Formato ISO 8601</h1>
+<b>Data convertida para Região</b> {{ minhaData | date : "full" }}
+<br />
+<br />
+<b>Data UTC-0</b> {{ minhaData | date : "full" : "+0000" }}
+<br />
+<br />
+
+<h1>Formato Timestemp</h1>
+Timestemp para região: {{ 1697922000000 | date : "full" }}
+<br />
+<br />
+Timestemp para UTC-0: {{ 1697922000000 | date : "full" : "+0000" }}
+<br />
+<br />
+
+<h1>Formato Date Obj</h1>
+<b>Data Convertida para Região:</b> {{ minhaDataObj | date : "full" }}
+<b>Data UTC-0:</b> {{ minhaDataObj | date : "full" : "+0000" }}
