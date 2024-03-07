@@ -20,7 +20,7 @@ Timestemp para UTC-0: {{ 1697922000000 | date : "full" : "+0000" }}
 <b>Data UTC-0:</b> {{ minhaDataObj | date : "full" : "+0000" }} -->
 
 <!-- Aula 02  -->
-<h1>Formatações:</h1>
+<!-- <h1>Formatações:</h1>
 
 Curto: {{ "2023-10-21T21:00:00.000Z" | date : "short" }}
 <br />
@@ -76,4 +76,11 @@ Completo: {{ "2023-10-21T21:00:00.000Z" | date : "full" }}
 <b>"Data: 21/10/2023 Hora: 18:00 PM"</b>
 <p>
   {{ "2023-10-21T21:00:00.000Z" | date : "'Data:' dd/MM/YYYY 'Hora:' HH:mm a" }}
-</p>
+</p> -->
+
+<!-- Aula 03 -->
+{{ "2023-10-21T21:00:00.000Z" | date }}
+<br />
+{{ "2023-10-21T21:00:00.000Z" | date : "full" }}
+<br />
+{{ "2023-10-21T21:00:00.000Z" | date : "full" : undefined : "pt-BR" }}
