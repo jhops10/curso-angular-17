@@ -86,7 +86,7 @@ Completo: {{ "2023-10-21T21:00:00.000Z" | date : "full" }}
 {{ "2023-10-21T21:00:00.000Z" | date : "full" : undefined : "pt-BR" }} -->
 
 <!-- Aula 04 -->
-{{ 12.3 | number : "3.0-2" : "en-US" }} -> 012.3
+<!-- {{ 12.3 | number : "3.0-2" : "en-US" }} -> 012.3
 <br />
 {{ 1234.3 | number : "4.0-2" : "en-US" }} -> 1,234.3
 <br />
@@ -110,4 +110,15 @@ Completo: {{ "2023-10-21T21:00:00.000Z" | date : "full" }}
 <br />
 {{ 12.3677 | number : "0.0-2" : "en-US" }} -> 12.37
 <br />
-{{ 12.5 | number : "0.0-0" : "en-US" }} -> 13
+{{ 12.5 | number : "0.0-0" : "en-US" }} -> 13 -->
+
+<!-- Aula 05 -->
+{{ 1200.99 | currency : "BRL" }}
+<br />
+{{ 1200.99 | currency : "BRL" : "code" }}
+<br />
+{{ 1200.99 | currency : "BRL" : "symbol" }}
+<br />
+{{ 1200.99 | currency : "BRL" : "symbol-narrow" }}
+<br />
+{{ 1200.99 | currency : "BRL" : "teste" }}
