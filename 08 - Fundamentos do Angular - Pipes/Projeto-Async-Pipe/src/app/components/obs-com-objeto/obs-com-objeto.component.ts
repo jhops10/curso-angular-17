@@ -1,6 +1,6 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { UsersService } from '../../services/users.service';
-import { IUserResponse } from '../../interfaces/User-response.interface';
+import { IUserResponse } from '../../interfaces/user-response.interface';
 import { Observable, Subscription } from 'rxjs';
 
 @Component({
