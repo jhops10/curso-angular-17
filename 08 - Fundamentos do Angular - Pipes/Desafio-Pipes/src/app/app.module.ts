@@ -8,12 +8,14 @@ import { StatusIconPipe } from './pipes/status-icon.pipe';
 
 import localPt from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
+import { FilterPipe } from './pipes/filter.pipe';
+import { FormsModule } from '@angular/forms';
 
 registerLocaleData(localPt, 'pt-BR');
 
 @NgModule({
-  declarations: [AppComponent, StatusPipe, StatusIconPipe],
-  imports: [BrowserModule, AppRoutingModule],
+  declarations: [AppComponent, StatusPipe, StatusIconPipe, FilterPipe],
+  imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [
     {
       provide: LOCALE_ID,
