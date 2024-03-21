@@ -1,6 +1,6 @@
-import { IOperationResponse } from '../interfaces/operation-response.interface';
+import { OperationsListResponse } from '../types/operations-list-response.type';
 
-export const OperationsListResponseMock: IOperationResponse[] = [
+export const OperationsListResponseMock: OperationsListResponse = [
   {
     customerName: 'João',
     customerStatus: 1,
