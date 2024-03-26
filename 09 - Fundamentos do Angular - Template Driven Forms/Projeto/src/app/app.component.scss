@@ -1,0 +1,19 @@
+// .valid {
+//   border-color: green;
+//   background-color: lightgreen;
+// }
+
+// .invalid {
+//   border-color: red;
+//   background-color: lightcoral;
+// }
+
+.ng-valid.ng-touched {
+  border-color: green;
+  background-color: lightgreen;
+}
+
+.ng-invalid.ng-touched {
+  border-color: red;
+  background-color: lightcoral;
+}
