@@ -9,8 +9,18 @@
 
 <!-- Aula 04 -->
 
-<form #meuForm="ngForm" (ngSubmit)="onSubmit(meuForm)">
-  <input name="nome" type="text" [(ngModel)]="inputText" />
+<form
+  #meuForm="ngForm"
+  (ngSubmit)="onSubmit(meuForm)"
+  [ngFormOptions]="{ updateOn: 'change' }"
+>
+  <input
+    name="nome"
+    type="text"
+    [(ngModel)]="inputText"
+    [ngModelOptions]="{ updateOn: 'change' }"
+    required
+  />
   <br />
   <textarea name="descricao" [(ngModel)]="textarea"></textarea>
   <br />
