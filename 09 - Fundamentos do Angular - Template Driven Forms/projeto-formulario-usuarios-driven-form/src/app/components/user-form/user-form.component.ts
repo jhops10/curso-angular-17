@@ -29,9 +29,9 @@ export class UserFormComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    console.log(' <- NgOnChange -> ');
-    console.log(this.genresList);
-    console.log(this.stateList);
-    console.log(this.userSelected);
+    // console.log(' <- NgOnChange -> ');
+    // console.log(this.genresList);
+    // console.log(this.stateList);
+    // console.log(this.userSelected);
   }
 }
