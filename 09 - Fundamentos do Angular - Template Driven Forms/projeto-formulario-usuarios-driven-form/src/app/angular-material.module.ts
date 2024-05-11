@@ -2,9 +2,11 @@ import { NgModule } from '@angular/core';
 
 //Angular Material
 import { MatCardModule } from '@angular/material/card';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 @NgModule({
-  imports: [MatCardModule],
-  exports: [MatCardModule],
+  imports: [MatCardModule, MatFormFieldModule, MatInputModule],
+  exports: [MatCardModule, MatFormFieldModule, MatInputModule],
 })
 export class AngularMaterialModule {}
