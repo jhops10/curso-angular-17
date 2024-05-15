@@ -8,6 +8,7 @@ import {
 import { GenreListResponse } from '../../types/genre-list-response';
 import { StateListResponse } from '../../types/state-list-response';
 import { IUser } from '../../interfaces/user/user.interface';
+import { getPasswordStrengthValue } from '../../utils/get-password-strength-value';
 
 @Component({
   selector: 'app-user-form',
@@ -15,6 +16,8 @@ import { IUser } from '../../interfaces/user/user.interface';
   styleUrl: './user-form.component.scss',
 })
 export class UserFormComponent implements OnInit, OnChanges {
+  passwordStrengthValue = 0;
+
   @Input() genresList: GenreListResponse = [];
   @Input() stateList: StateListResponse = [];
   @Input() userSelected: IUser = {} as IUser;
@@ -29,9 +32,13 @@ export class UserFormComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    // console.log(' <- NgOnChange -> ');
-    // console.log(this.genresList);
-    // console.log(this.stateList);
-    // console.log(this.userSelected);
+    const USER_CHANGED = changes['userSelected'];
+    if (USER_CHANGED) {
+      this.onPasswordChange(this.userSelected.password);
+    }
+  }
+
+  onPasswordChange(password: string) {
+    this.passwordStrengthValue = getPasswordStrengthValue(password);
   }
 }
