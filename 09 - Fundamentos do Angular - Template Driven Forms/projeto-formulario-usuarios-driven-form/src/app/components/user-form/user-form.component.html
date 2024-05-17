@@ -141,6 +141,7 @@
             [max]="maxDate"
             name="dataNascimento"
             [ngModel]="dateValue"
+            (dateChange)="onDateChange($event)"
             readonly
             required
           />
