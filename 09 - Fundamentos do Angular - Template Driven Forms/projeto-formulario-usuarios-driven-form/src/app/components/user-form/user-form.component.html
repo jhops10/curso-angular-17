@@ -1,6 +1,11 @@
 <mat-card>
   <mat-card-content>
-    <form class="user-form" #userForm="ngForm" appPasswordConfirmationValidator>
+    <form
+      class="user-form"
+      #userForm="ngForm"
+      (ngSubmit)="onFormSubmit(userForm)"
+      appPasswordConfirmationValidator
+    >
       <div class="user-form__row">
         <mat-form-field class="user-form__item user-form__item-100">
           <mat-label>Nome: </mat-label>
@@ -245,6 +250,9 @@
                       >{{ genre.description }}</mat-option
                     >
                   </mat-autocomplete>
+                  <mat-error
+                    >O <strong>Gênero</strong> é obrigatório.</mat-error
+                  >
                 </mat-form-field>
               </td>
             </ng-container>
@@ -264,6 +272,9 @@
             <tr mat-row *matRowDef="let row; columns: displayColumns"></tr>
           </table>
         </div>
+      </div>
+      <div class="user-form__row user-form__button-container">
+        <button type="submit" mat-raised-button color="primary">Salvar</button>
       </div>
     </form>
   </mat-card-content>
