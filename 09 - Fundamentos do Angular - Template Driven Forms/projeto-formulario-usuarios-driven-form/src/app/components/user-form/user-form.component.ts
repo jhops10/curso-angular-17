@@ -4,6 +4,7 @@ import {
   OnChanges,
   OnInit,
   SimpleChanges,
+  getNgModuleById,
 } from '@angular/core';
 import { GenreListResponse } from '../../types/genre-list-response';
 import { StateListResponse } from '../../types/state-list-response';
@@ -24,6 +25,7 @@ export class UserFormComponent implements OnInit, OnChanges {
   minDate: Date | null = null;
   maxDate: Date | null = null;
   displayColumns: string[] = ['title', 'band', 'genre', 'favorite'];
+  filteredGenresList: GenreListResponse = [];
 
   @Input() genresList: GenreListResponse = [];
   @Input() stateList: StateListResponse = [];
@@ -40,6 +42,7 @@ export class UserFormComponent implements OnInit, OnChanges {
     if (USER_CHANGED) {
       this.onPasswordChange(this.userSelected.password);
       this.setBirthDateToDatepicker(this.userSelected.birthDate);
+      this.filteredGenresList = this.genresList;
     }
   }
 
@@ -53,6 +56,22 @@ export class UserFormComponent implements OnInit, OnChanges {
     }
     this.userSelected.birthDate = convertDateObjToPtBrDate(event.value);
     console.log(event);
+  }
+
+  displayFn(genreId: number) {
+    const genreFound = this.genresList.find((genre) => genre.id === genreId);
+
+    return genreFound ? genreFound.description : '';
+  }
+
+  filterGenres(text: string) {
+    if (typeof text === 'number') {
+      return;
+    }
+    const searchTerm = text.toLowerCase();
+    this.filteredGenresList = this.genresList.filter((genre) =>
+      genre.description.toLowerCase().includes(searchTerm)
+    );
   }
 
   private setMinAndMaxDate() {
